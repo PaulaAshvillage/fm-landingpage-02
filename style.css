@@ -67,7 +67,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+  font-family: inherit;
 }
 /*
     8. Avoid text overflows
@@ -84,6 +84,44 @@ h6 {
 /*
    
 /*general styling*/
-html {
+
+h1,
+h2,
+h3 {
   font-family: "Fraunces", serif;
+}
+html {
+  font-family: "Manrope", sans-serif;
+}
+header {
+  background-color: var(--color-dark-blue);
+}
+
+/* specific styling*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+
+  background-color: var(--color-dark-blue);
+  color: var(--color-ghost-white);
+}
+.btn-header {
+  background-color: inherit;
+  font-weight: bold;
+  font-size: inherit;
+  color: inherit;
+
+  border: none;
+  border-bottom: solid var(--color-eucalyptus);
+}
+.hero-shot {
+  text-align: center;
+  background-color: var(--color-dark-blue);
+  color: var(--color-ghost-white);
+}
+
+u {
+  text-decoration: var(--color-eucalyptus);
 }
