@@ -66,7 +66,8 @@ svg {
 input,
 button,
 textarea,
-select {
+select,
+ol {
   font-family: inherit;
 }
 /*
@@ -93,9 +94,6 @@ h3 {
 html {
   font-family: "Manrope", sans-serif;
 }
-header {
-  background-color: var(--color-dark-blue);
-}
 
 /* specific styling*/
 
@@ -104,24 +102,96 @@ header {
   justify-content: space-between;
   padding: 1rem;
 
-  background-color: var(--color-dark-blue);
   color: var(--color-ghost-white);
+  background: var(--color-dark-blue); /*wieder entfernen*/
 }
+
 .btn-header {
   background-color: inherit;
   font-weight: bold;
   font-size: inherit;
   color: inherit;
-
   border: none;
   border-bottom: solid var(--color-eucalyptus);
 }
+
 .hero-shot {
+  font-size: 1.5rem;
   text-align: center;
-  background-color: var(--color-dark-blue);
   color: var(--color-ghost-white);
+  background: var(--color-dark-blue); /*wieder entfernen*/
+
+  padding-inline: 1rem;
 }
 
-u {
-  text-decoration: var(--color-eucalyptus);
+b {
+  text-decoration: underline;
+  text-decoration-color: var(--color-eucalyptus);
+}
+
+.btn-green {
+  color: var(--color-dark-blue);
+  background-color: var(--color-eucalyptus);
+  font-weight: bold;
+  border: none;
+
+  padding-block: 1rem;
+  padding-inline: 2rem;
+
+  margin-block: 2.5rem;
+}
+
+.feature-list {
+  list-style: none; /*removes default list styling in order to get specific counter styling*/
+  padding: 0;
+  margin: 0;
+  counter-reset: specific-counter;
+}
+
+.feature-list li::before {
+  /*use css counter*/
+  content: counter(specific-counter); /*adds counter*/
+  border: 0.1rem solid var(--color-dark-blue);
+  border-radius: 50% 50% 50% 50%;
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  font-weight: bold;
+
+  padding-inline: 1.3rem;
+  padding-block: 1rem;
+}
+.feature-list li {
+  counter-increment: specific-counter; /*counts*/
+  text-align: center;
+  margin-block: 2rem;
+}
+
+h2 {
+  color: --color-dark-blue;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+
+  margin-top: 2rem;
+}
+.content-ol {
+  color: var(--color-davys-gray);
+
+  padding-block: 1.5rem;
+  padding-inline: 1.5rem;
+}
+.img-founder {
+  margin-inline: 3rem;
+}
+.cta-founder {
+  background: var(--color-dark-blue);
+  color: var(--color-ghost-white);
+
+  text-align: center;
+  padding: 1.5rem;
+  margin-inline: 1rem;
+}
+.cta-content {
+  padding-top: 1rem;
+}
+.img-cta-section {
 }
