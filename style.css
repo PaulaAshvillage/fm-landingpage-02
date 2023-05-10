@@ -103,9 +103,12 @@ header {
   padding: 1rem;
 
   color: var(--color-ghost-white);
-  background: var(--color-dark-blue); /*wieder entfernen*/
+  background: var(--color-dark-blue);
 }
-
+.background-middle {
+  background-color: var(--color-ghost-white);
+  border-radius: 0 0 100% 100%/ 0 0 20% 20%;
+}
 .btn-header {
   background-color: inherit;
   font-weight: bold;
@@ -119,11 +122,14 @@ header {
   font-size: 1.5rem;
   text-align: center;
   color: var(--color-ghost-white);
+
   background: var(--color-dark-blue); /*wieder entfernen*/
 
   padding-inline: 1rem;
 }
-
+.background-bottom {
+  border-radius: 0 0 100% 100%/ 0 0 20% 20%;
+}
 b {
   text-decoration: underline;
   text-decoration-color: var(--color-eucalyptus);
@@ -138,13 +144,20 @@ b {
   padding-block: 1rem;
   padding-inline: 2rem;
 
-  margin-block: 2.5rem;
+  margin-top: 1rem;
+}
+.img-hero {
+  position: relative;
+  top: 4rem;
 }
 
 .feature-list {
   list-style: none; /*removes default list styling in order to get specific counter styling*/
+  background-color: var(--color-ghost-white);
+
   padding: 0;
   margin: 0;
+  margin-top: 7rem;
   counter-reset: specific-counter;
 }
 
@@ -179,17 +192,43 @@ h2 {
   padding-block: 1.5rem;
   padding-inline: 1.5rem;
 }
+
 .img-founder {
-  margin-inline: 3rem;
+  margin-inline: 3.5rem;
 }
 .cta-founder {
+  position: relative;
+  bottom: 3rem;
+
   background: var(--color-dark-blue);
   color: var(--color-ghost-white);
 
   text-align: center;
-  padding: 1.5rem;
+  padding-inline: 1.5rem;
+  padding-block: 1rem;
   margin-inline: 1rem;
 }
 .cta-content {
   padding-top: 1rem;
+}
+
+.footer-label {
+  display: flex;
+  justify-content: center;
+
+  padding-block: 3rem;
+}
+
+.list-social-media li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-social-media {
+  display: flex;
+  justify-content: center;
+
+  padding-block: 3rem;
+  gap: 1rem;
+  padding-right: 2.5rem;
 }
