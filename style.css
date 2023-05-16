@@ -101,13 +101,16 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  padding-bottom: 2rem;
 
   color: var(--color-ghost-white);
   background: var(--color-dark-blue);
 }
-.background-middle {
-  background-color: var(--color-ghost-white);
-  border-radius: 0 0 100% 100%/ 0 0 20% 20%;
+.grafic-element-1 {
+  display: none;
+}
+.grafic-element-2 {
+  display: none;
 }
 .btn-header {
   background-color: inherit;
@@ -126,15 +129,17 @@ header {
   background: var(--color-dark-blue); /*wieder entfernen*/
 
   padding-inline: 1rem;
+  border-radius: 0 0 100% 100%/ 0 0 5% 5%;
 }
-.background-bottom {
-  border-radius: 0 0 100% 100%/ 0 0 20% 20%;
-}
+
 b {
   text-decoration: underline;
   text-decoration-color: var(--color-eucalyptus);
 }
-
+.background-middle {
+  background-color: var(--color-ghost-white);
+  border-radius: 0 0 100% 100%/ 0 0 5% 5%;
+}
 .btn-green {
   color: var(--color-dark-blue);
   background-color: var(--color-eucalyptus);
@@ -155,9 +160,10 @@ b {
   list-style: none; /*removes default list styling in order to get specific counter styling*/
   background-color: var(--color-ghost-white);
 
+  border-radius: 0 0 100% 100%/ 0 0 5% 5%;
   padding: 0;
   margin: 0;
-  margin-top: 7rem;
+  padding-top: 7rem;
   counter-reset: specific-counter;
 }
 
@@ -188,7 +194,7 @@ h2 {
 }
 .content-ol {
   color: var(--color-davys-gray);
-
+  border-radius: 20px;
   padding-block: 1.5rem;
   padding-inline: 1.5rem;
 }
@@ -231,4 +237,20 @@ h2 {
   padding-block: 3rem;
   gap: 1rem;
   padding-right: 2.5rem;
+}
+@media screen and (min-width: 786px) {
+  .grafic-element-1 {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    left: -3rem;
+  }
+  .grafic-element-2 {
+    display: block;
+    position: absolute;
+    left: 50rem;
+  }
+  .img-hero {
+    padding-inline: 10rem;
+  }
 }
